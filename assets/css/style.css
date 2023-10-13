@@ -1,0 +1,189 @@
+
+
+@font-face {
+	font-family: 'FontOne';
+	src: url('../fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+@font-face {
+	font-family: 'hankBold';
+	src: url('../fonts/static/HankenGrotesk-Bold.ttf');
+}
+@font-face {
+	font-family: 'FontExtraBold';
+	src: url('../fonts/static/HankenGrotesk-ExtraBold.ttf')
+}
+@font-face {
+	font-family: 'mediumFont';
+	src: url('../fonts/static/HankenGrotesk-Medium.ttf');
+}
+body {
+	font-family: 'FontOne';
+	background-color: white;
+	font-size: 18;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Start styling  */
+.result {
+	background-image: linear-gradient(to top ,hsl(241, 81%, 54%), hsl(252, 100%, 67%) );
+	text-align: center;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+.result .title {
+	color:  hsl(241, 100%, 89%);
+	padding: 20px 0;
+	font-size: 1.2rem;
+}
+.result .points {
+	background-image: linear-gradient(to top,hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+	width: 120px;
+	margin: auto;
+	height: 120px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: hsl(0, 0%, 100%);
+	font-family: 'FontExtraBold';
+	font-size: 2.5rem;
+}
+.result .points small {
+	color:  hsl(241, 100%, 89%);
+	font-size: .9rem;
+}
+.result .great {
+	display: block;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.5rem;
+	font-family: 'hankBold';
+	margin: 20px 0 5px;
+
+}
+.result .desc {
+	padding: 0 20px 40px;
+	width: 80%;
+	margin: auto;
+	color:  hsl(241, 100%, 89%);
+}
+/* Start info section  */
+.info {
+	padding: 20px 30px;
+
+}
+.info .title {
+	color:  hsl(224, 30%, 27%);
+	font-size: 1.1rem;
+	font-family: 'FontOne';
+}
+.info .box {
+	margin: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+	font-family: 'hankBold';
+}
+.info .box:nth-child(2) {
+	background: hsla(0, 100%, 67%, 0.081);
+	border-radius: 5px;
+}
+.info .box:nth-child(3) {
+	background: hsla(39, 100%, 56%, 0.112);
+	border-radius: 5px;
+}
+.info .box:nth-child(4) {
+	background: hsla(166, 100%, 37%, 0.056);
+	border-radius: 5px;
+}
+.info .box:nth-child(5) {
+	background:  hsla(234, 85%, 45%, 0.08);
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+.info .box .box-skill {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.info .box .box-skill img {
+	margin-right: 10px;
+}
+.box .box-points {
+	display: flex;
+	justify-content: flex-end;
+}
+.box .box-points .total {
+	color: hsl(241, 100%, 89%);
+	margin-left: 10px;
+}
+.info .box .reaction {
+	color:  hsl(0, 100%, 67%);
+}
+.info .box .memory {
+	color:  hsl(39, 100%, 56%);
+}
+.info .box .verbal {
+	color: hsl(166, 100%, 37%);
+}
+.info .box .visual {
+	color:  hsl(234, 85%, 45%);
+}
+.info #btn {
+	width: 100%;
+	padding: 15px;
+	border-radius: 40px;
+	border: none;
+	background-color: hsl(224, 30%, 27%);
+	color: white;
+	font-family: 'mediumFont';
+	font-size: 1rem;
+	cursor: pointer;
+}
+.info #btn:hover {
+	background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+/* Start media query  */
+@media screen and (min-width: 992px) {
+	body {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	main {
+		display: flex;
+		max-width: 600px;
+		box-shadow: 0px 0px 11px 1px hsl(241, 100%, 89%);
+		border-radius: 20px;
+	}
+	.result {
+		border-radius: 20px;
+		width: calc(100% / 2);
+	}
+	.result .title {
+		margin-top: 20px;
+	}
+	.result .points {
+		width: 140px;
+		height: 140px;
+	}
+	.result  .desc {
+		padding: 0 5px;
+	}
+	.info {
+		
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+		width: calc(100% / 2);
+	}
+	.info .title {
+		color:  hsl(224, 30%, 27%);
+		font-family: 'fontExtraBold';
+	}
+}
