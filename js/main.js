@@ -27,7 +27,7 @@ function newReq() {
 		
 	}
 	// Configure 
-	myRequest.open('GET','../../data.json');
+	myRequest.open('GET','../data.json');
 	// send the request
 	myRequest.send();
 }
